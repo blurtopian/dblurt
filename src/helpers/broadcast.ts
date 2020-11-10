@@ -314,7 +314,9 @@ export class BroadcastAPI {
     const props = await this.client.database.getDynamicGlobalProperties();
     this.client.chainId = Buffer.from(this.client.chainId, 'hex');
 
-    const ref_block_num = props.head_block_number & 0xffff;
+    //    const ref_block_num = props.head_block_number & 0xffff;
+    const ref_block_num = (props.head_block_number - 1) & 0xffff;
+
     const ref_block_prefix = Buffer.from(
       props.head_block_id,
       'hex'
