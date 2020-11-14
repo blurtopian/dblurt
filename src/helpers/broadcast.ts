@@ -312,7 +312,6 @@ export class BroadcastAPI {
     key: PrivateKey | PrivateKey[]
   ): Promise<TransactionConfirmation> {
     const props = await this.client.database.getDynamicGlobalProperties();
-    this.client.chainId = Buffer.from(this.client.chainId, 'hex');
 
     const ref_block_num = props.head_block_number & 0xffff;
 

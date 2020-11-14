@@ -1,14 +1,14 @@
 {
-  "name": "@hiveio/dhive",
-  "version": "0.14.11",
-  "description": "Hive blockchain RPC client library",
-  "author": "hive-network",
+  "name": "dblurt",
+  "version": "0.1.1",
+  "description": "Blurt blockchain RPC client library",
+  "author": "etainclub",
   "license": "BSD-3-Clause",
   "main": "./lib/index-node",
   "typings": "./lib/index",
   "browser": {
-    "./lib/index-node": "./dist/dhive.js",
-    "./src/index-node": "./dist/dhive.js",
+    "./lib/index-node": "./dist/dblurt.js",
+    "./src/index-node": "./dist/dblurt.js",
     "./src/version": "./lib/version.js"
   },
   "files": [
@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitlab.syncad.com/hive/dhive"
+    "url": "https://gitlab.com/blurt/openblurt/dblurt"
   },
   "scripts": {
     "lint": "make lint",
@@ -28,8 +28,8 @@
     "blockchain",
     "client",
     "rpc",
-    "hive",
-    "dhive"
+    "blurt",
+    "dblurt"
   ],
   "dependencies": {
     "bs58": "^4.0.1",
