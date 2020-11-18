@@ -779,7 +779,7 @@ declare module 'dblurt/crypto' {
 	     */
 	    recover(message: Buffer, prefix?: string): PublicKey;
 	    toBuffer(): Buffer;
-	    toString(): string;
+	    toString(): any;
 	} function transactionDigest(transaction: Transaction | SignedTransaction, chainId?: Buffer): Buffer; function signTransaction(transaction: Transaction, keys: PrivateKey | PrivateKey[], chainId?: Buffer): SignedTransaction;
 	/** Misc crypto utility functions. */
 	export const cryptoUtils: {

@@ -1,1 +1,1 @@
-Served at <https://openhive-network.github.io/dhive>
+Served at <https://gitlab.com/blurt/openblurt/dblurt>
