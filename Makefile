@@ -25,7 +25,7 @@ dist/%.js: lib
 		| derequire > $@
 	uglifyjs $@ \
 		--source-map "content=inline,url=$(notdir $@).map,filename=$@.map" \
-		--compress "dead_code,collapse_vars,reduce_vars,keep_infinity,drop_console,passes=2" \
+		--compress "dead_code,collapse_vars,reduce_vars,keep_infinity,passes=2" \
 		--output $@ || rm $@
 
 dist/dblurt.js: src/index-browser.ts
