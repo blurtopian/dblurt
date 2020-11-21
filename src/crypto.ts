@@ -359,6 +359,8 @@ function transactionDigest(
     ByteBuffer.LITTLE_ENDIAN
   );
   try {
+    // @test
+    console.log('[dblurt|transactionDigest] transaction', transaction);
     Types.Transaction(buffer, transaction);
   } catch (cause) {
     throw new VError(
