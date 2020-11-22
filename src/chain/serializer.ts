@@ -269,7 +269,7 @@ OperationSerializers.account_create_with_delegation = OperationDataSerializer(
   ]
 );
 
-OperationSerializers.account_update = OperationDataSerializer(10, [
+OperationSerializers.account_update = OperationDataSerializer(6, [
   ['account', StringSerializer],
   ['owner', OptionalSerializer(AuthoritySerializer)],
   ['active', OptionalSerializer(AuthoritySerializer)],
@@ -278,32 +278,32 @@ OperationSerializers.account_update = OperationDataSerializer(10, [
   ['json_metadata', StringSerializer],
 ]);
 
-OperationSerializers.account_witness_proxy = OperationDataSerializer(13, [
+OperationSerializers.account_witness_proxy = OperationDataSerializer(9, [
   ['account', StringSerializer],
   ['proxy', StringSerializer],
 ]);
 
-OperationSerializers.account_witness_vote = OperationDataSerializer(12, [
+OperationSerializers.account_witness_vote = OperationDataSerializer(8, [
   ['account', StringSerializer],
   ['witness', StringSerializer],
   ['approve', BooleanSerializer],
 ]);
 
 OperationSerializers.cancel_transfer_from_savings = OperationDataSerializer(
-  34,
+  26,
   [
     ['from', StringSerializer],
     ['request_id', UInt32Serializer],
   ]
 );
 
-OperationSerializers.change_recovery_account = OperationDataSerializer(26, [
+OperationSerializers.change_recovery_account = OperationDataSerializer(19, [
   ['account_to_recover', StringSerializer],
   ['new_recovery_account', StringSerializer],
   ['extensions', ArraySerializer(VoidSerializer)],
 ]);
 
-OperationSerializers.claim_account = OperationDataSerializer(22, [
+OperationSerializers.claim_account = OperationDataSerializer(15, [
   ['creator', StringSerializer],
   ['fee', AssetSerializer],
   ['extensions', ArraySerializer(VoidSerializer)],
