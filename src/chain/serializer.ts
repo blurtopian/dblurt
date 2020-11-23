@@ -230,10 +230,6 @@ const OperationDataSerializer = (
   operationId: number,
   definitions: [string, Serializer][]
 ) => {
-  // @test
-  console.log('[dblurt|OperationDataSerializer] operationId', operationId);
-  console.log('[dblurt|OperationDataSerializer] definitions', definitions);
-
   const objectSerializer = ObjectSerializer(definitions);
   return (buffer: ByteBuffer, data: { [key: string]: any }) => {
     buffer.writeVarint32(operationId);
