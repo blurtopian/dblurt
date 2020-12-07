@@ -324,7 +324,7 @@ OperationSerializers.comment = OperationDataSerializer(1, [
   ['json_metadata', StringSerializer],
 ]);
 
-OperationSerializers.comment_options = OperationDataSerializer(19, [
+OperationSerializers.comment_options = OperationDataSerializer(13, [
   ['author', StringSerializer],
   ['permlink', StringSerializer],
   ['max_accepted_payout', AssetSerializer],
@@ -359,7 +359,7 @@ OperationSerializers.create_claimed_account = OperationDataSerializer(16, [
   ['extensions', ArraySerializer(VoidSerializer)],
 ]);
 
-OperationSerializers.custom = OperationDataSerializer(15, [
+OperationSerializers.custom = OperationDataSerializer(10, [
   ['required_auths', ArraySerializer(StringSerializer)],
   ['id', UInt16Serializer],
   ['data', VariableBinarySerializer],
