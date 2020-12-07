@@ -400,6 +400,8 @@ function signTransaction(
     signedTransaction.signatures.push(signature.toString());
   }
 
+  console.log('[dblurt|signTransaction] signedTransaction', signedTransaction);
+
   return signedTransaction;
 }
 
