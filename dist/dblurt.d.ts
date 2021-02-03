@@ -722,7 +722,7 @@ declare module 'dblurt/crypto' {
 	     */
 	    inspect(): string;
 	}
-	export type KeyRole = 'owner' | 'active' | 'posting' | 'memo';
+	export type KeyRole = "owner" | "active" | "posting" | "memo";
 	/**
 	 * ECDSA (secp256k1) private key.
 	 */
@@ -1823,7 +1823,7 @@ declare module 'dblurt/utils' {
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
 	/// <reference types="node" />
-	import { EventEmitter } from 'events';
+	import { EventEmitter } from "events";
 	/**
 	 * Return a promise that will resove when a specific event is emitted.
 	 */
