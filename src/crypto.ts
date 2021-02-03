@@ -33,18 +33,18 @@
  * in the design, construction, operation or maintenance of any military facility.
  */
 
-import * as assert from 'assert';
-import * as bs58 from 'bs58';
-import * as ByteBuffer from 'bytebuffer';
-import { createHash } from 'crypto';
-import * as secp256k1 from 'secp256k1';
-import { VError } from 'verror';
+import * as assert from "assert";
+import * as bs58 from "bs58";
+import * as ByteBuffer from "bytebuffer";
+import { createHash } from "crypto";
+import * as secp256k1 from "secp256k1";
+import { VError } from "verror";
 
-import * as util from 'util';
-import { Types } from './chain/serializer';
-import { SignedTransaction, Transaction } from './chain/transaction';
-import { DEFAULT_ADDRESS_PREFIX, DEFAULT_CHAIN_ID } from './client';
-import { copy } from './utils';
+import * as util from "util";
+import { Types } from "./chain/serializer";
+import { SignedTransaction, Transaction } from "./chain/transaction";
+import { DEFAULT_ADDRESS_PREFIX, DEFAULT_CHAIN_ID } from "./client";
+import { copy } from "./utils";
 
 /**
  * Network id used in WIF-encoding.
@@ -55,14 +55,14 @@ export const NETWORK_ID = Buffer.from([0x80]);
  * Return ripemd160 hash of input.
  */
 function ripemd160(input: Buffer | string): Buffer {
-  return createHash('ripemd160').update(input).digest();
+  return createHash("ripemd160").update(input).digest();
 }
 
 /**
  * Return sha256 hash of input.
  */
 function sha256(input: Buffer | string): Buffer {
-  return createHash('sha256').update(input).digest();
+  return createHash("sha256").update(input).digest();
 }
 
 /**
@@ -85,13 +85,13 @@ function encodePublic(key: Buffer, prefix: string): string {
  */
 function decodePublic(encodedKey: string): { key: Buffer; prefix: string } {
   const prefix = encodedKey.slice(0, 3);
-  assert.equal(prefix.length, 3, 'public key invalid prefix');
+  assert.equal(prefix.length, 3, "public key invalid prefix");
   encodedKey = encodedKey.slice(3);
   const buffer: Buffer = bs58.decode(encodedKey);
   const checksum = buffer.slice(-4);
   const key = buffer.slice(0, -4);
   const checksumVerify = ripemd160(key).slice(0, 4);
-  assert.deepEqual(checksumVerify, checksum, 'public key checksum mismatch');
+  assert.deepEqual(checksumVerify, checksum, "public key checksum mismatch");
   return { key, prefix };
 }
 
@@ -99,7 +99,7 @@ function decodePublic(encodedKey: string): { key: Buffer; prefix: string } {
  * Encode bs58+doubleSha256-checksum private key.
  */
 function encodePrivate(key: Buffer): string {
-  assert.equal(key.readUInt8(0), 0x80, 'private key network id mismatch');
+  assert.equal(key.readUInt8(0), 0x80, "private key network id mismatch");
   const checksum = doubleSha256(key);
   return bs58.encode(Buffer.concat([key, checksum.slice(0, 4)]));
 }
@@ -112,12 +112,12 @@ function decodePrivate(encodedKey: string): Buffer {
   assert.deepEqual(
     buffer.slice(0, 1),
     NETWORK_ID,
-    'private key network id mismatch'
+    "private key network id mismatch"
   );
   const checksum = buffer.slice(-4);
   const key = buffer.slice(0, -4);
   const checksumVerify = doubleSha256(key).slice(0, 4);
-  assert.deepEqual(checksumVerify, checksum, 'private key checksum mismatch');
+  assert.deepEqual(checksumVerify, checksum, "private key checksum mismatch");
   return key;
 }
 
@@ -158,7 +158,7 @@ export class PublicKey {
     public readonly key: Buffer,
     public readonly prefix = DEFAULT_ADDRESS_PREFIX
   ) {
-    assert(secp256k1.publicKeyVerify(key), 'invalid public key');
+    assert(secp256k1.publicKeyVerify(key), "invalid public key");
   }
 
   /**
@@ -211,21 +211,21 @@ export class PublicKey {
   }
 }
 
-export type KeyRole = 'owner' | 'active' | 'posting' | 'memo';
+export type KeyRole = "owner" | "active" | "posting" | "memo";
 
 /**
  * ECDSA (secp256k1) private key.
  */
 export class PrivateKey {
   constructor(private key: Buffer) {
-    assert(secp256k1.privateKeyVerify(key), 'invalid private key');
+    assert(secp256k1.privateKeyVerify(key), "invalid private key");
   }
 
   /**
    * Convenience to create a new instance from WIF string or buffer.
    */
   public static from(value: string | Buffer) {
-    if (typeof value === 'string') {
+    if (typeof value === "string") {
       return PrivateKey.fromString(value);
     } else {
       return new PrivateKey(value);
@@ -252,7 +252,7 @@ export class PrivateKey {
   public static fromLogin(
     username: string,
     password: string,
-    role: KeyRole = 'active'
+    role: KeyRole = "active"
   ) {
     const seed = username + role + password;
     return PrivateKey.fromSeed(seed);
@@ -303,18 +303,18 @@ export class PrivateKey {
  */
 export class Signature {
   constructor(public data: Buffer, public recovery: number) {
-    assert.equal(data.length, 64, 'invalid signature');
+    assert.equal(data.length, 64, "invalid signature");
   }
 
   public static fromBuffer(buffer: Buffer) {
-    assert.equal(buffer.length, 65, 'invalid signature');
+    assert.equal(buffer.length, 65, "invalid signature");
     const recovery = buffer.readUInt8(0) - 31;
     const data = buffer.slice(1);
     return new Signature(data, recovery);
   }
 
   public static fromString(string: string) {
-    return Signature.fromBuffer(Buffer.from(string, 'hex'));
+    return Signature.fromBuffer(Buffer.from(string, "hex"));
   }
 
   /**
@@ -339,11 +339,11 @@ export class Signature {
     //return this.toBuffer().toString('hex');
     return Array.prototype.map
       .call(new Uint8Array(this.toBuffer()), (x) =>
-        ('00' + x.toString(16)).slice(-2)
+        ("00" + x.toString(16)).slice(-2)
       )
-      .join('')
+      .join("")
       .match(/[a-fA-F0-9]{2}/g)
-      .join('');
+      .join("");
   }
 }
 /**
@@ -359,13 +359,11 @@ function transactionDigest(
     ByteBuffer.LITTLE_ENDIAN
   );
   try {
-    // @test
-    console.log('[dblurt|transactionDigest] transaction', transaction);
     Types.Transaction(buffer, transaction);
   } catch (cause) {
     throw new VError(
-      { cause, name: 'SerializationError' },
-      'Unable to serialize transaction'
+      { cause, name: "SerializationError" },
+      "Unable to serialize transaction"
     );
   }
   buffer.flip();
@@ -399,8 +397,6 @@ function signTransaction(
     const signature = key.sign(digest);
     signedTransaction.signatures.push(signature.toString());
   }
-
-  console.log('[dblurt|signTransaction] signedTransaction', signedTransaction);
 
   return signedTransaction;
 }
