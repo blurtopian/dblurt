@@ -249,6 +249,7 @@ export class DatabaseAPI {
       }
       params = params.concat(operation_bitmask)
     }
+    console.log("this.call('get_account_history', params)", params)
     return this.call('get_account_history', params)
   }
 
