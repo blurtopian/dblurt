@@ -241,6 +241,7 @@ export class DatabaseAPI {
     operation_bitmask?: [number, number]
   ): Promise<[[number, AppliedOperation]]> {
     let params = [account, from, limit]
+    /*
     if (operation_bitmask && Array.isArray(operation_bitmask)) {
       if (operation_bitmask.length !== 2) {
         throw Error(
@@ -249,6 +250,7 @@ export class DatabaseAPI {
       }
       params = params.concat(operation_bitmask)
     }
+    */
     console.log("this.call('get_account_history', params)", params)
     return this.call('get_account_history', params)
   }
