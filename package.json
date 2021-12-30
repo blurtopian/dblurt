@@ -1,8 +1,8 @@
 {
-  "name": "dblurt",
+  "name": "@blurtopian/dblurt",
   "version": "0.1.1",
   "description": "Blurt blockchain RPC client library",
-  "author": "etainclub",
+  "author": "eastmael",
   "license": "BSD-3-Clause",
   "main": "./lib/index-node",
   "typings": "./lib/index",
@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/blurt/openblurt/dblurt"
+    "url": "https://gitlab.com/blurtopian/blurtlibs/dblurt.git"
   },
   "scripts": {
     "lint": "make lint",
@@ -77,5 +77,14 @@
     "typescript": "^3.8.3",
     "uglify-js": "^3.4.9",
     "watchify": "^3.11.0"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/blurt/openblurt/dblurt/issues"
+  },
+  "homepage": "https://gitlab.com/blurt/openblurt/dblurt#readme",
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "test": "test"
   }
 }

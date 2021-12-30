@@ -5,3 +5,5 @@ coverage/
 .testnetrc
 .idea
 .vscode
+package.json.old
+package-lock.json

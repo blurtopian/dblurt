@@ -559,11 +559,11 @@ declare module 'dblurt/chain/serializer' {
 	export type Serializer = (buffer: ByteBuffer, data: any) => void;
 	export const Types: {
 	    Array: (itemSerializer: Serializer) => (buffer: ByteBuffer, data: any[]) => void;
-	    Asset: (buffer: ByteBuffer, data: string | number | Asset) => void;
+	    Asset: (buffer: ByteBuffer, data: Asset | string | number) => void;
 	    Authority: (buffer: ByteBuffer, data: {
 	        [key: string]: any;
 	    }) => void;
-	    Binary: (size?: number | undefined) => (buffer: ByteBuffer, data: HexBuffer | Buffer) => void;
+	    Binary: (size?: number | undefined) => (buffer: ByteBuffer, data: Buffer | HexBuffer) => void;
 	    Boolean: (buffer: ByteBuffer, data: boolean) => void;
 	    Date: (buffer: ByteBuffer, data: string) => void;
 	    FlatMap: (keySerializer: Serializer, valueSerializer: Serializer) => (buffer: ByteBuffer, data: [any, any][]) => void;
@@ -579,7 +579,7 @@ declare module 'dblurt/chain/serializer' {
 	    Price: (buffer: ByteBuffer, data: {
 	        [key: string]: any;
 	    }) => void;
-	    PublicKey: (buffer: ByteBuffer, data: string | PublicKey | null) => void;
+	    PublicKey: (buffer: ByteBuffer, data: PublicKey | string | null) => void;
 	    StaticVariant: (itemSerializers: Serializer[]) => (buffer: ByteBuffer, data: [number, any]) => void;
 	    String: (buffer: ByteBuffer, data: string) => void;
 	    Transaction: (buffer: ByteBuffer, data: {
