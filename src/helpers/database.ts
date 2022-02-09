@@ -146,6 +146,20 @@ export class DatabaseAPI {
     return this.call('get_vesting_delegations', [account, from, limit])
   }
 
+    /**
+   * Get list of incoming delegations to an account.
+   * @param account Account delegating
+   * @param from Delegatee start offset, used for paging.
+   * @param limit Number of results, max 1000.
+   */
+  public async getIncomingVestingDelegations(
+    account: string,
+    from = '',
+    limit = 1000
+  ): Promise<VestingDelegation[]> {
+    return this.call('get_incoming_vesting_delegations', [account, from, limit])
+  }
+
   /**
    * Return server config. See:
    * https://github.com/steemit/steem/blob/master/libraries/protocol/include/steemit/protocol/config.hpp
@@ -251,7 +265,6 @@ export class DatabaseAPI {
       params = params.concat(operation_bitmask)
     }
     */
-    console.log("this.call('get_account_history', params)", params)
     return this.call('get_account_history', params)
   }
 
