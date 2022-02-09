@@ -150,6 +150,22 @@ describe("database api", function() {
     assert.equal(Asset.from(delegation.vesting_shares).symbol, "VESTS");
   });
 
+  // this tests for delegations from the blurt account
+  it("getIncomingVestingDelegations", async function() {
+    this.slow(5 * 1000);
+    const [delegation] = await liveClient.database.getIncomingVestingDelegations(
+      "eastmael",
+      "",
+      1
+    );
+    if (!delegation) {
+      return
+    }
+    assert.equal(delegation.delegator, "eastmael");
+    assert.equal(typeof delegation.id, "number");
+    assert.equal(Asset.from(delegation.vesting_shares).symbol, "VESTS");
+  });
+
   it("verifyAuthority", async function() {
     this.slow(5 * 1000);
     const tx: Transaction = {

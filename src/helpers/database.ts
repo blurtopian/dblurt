@@ -146,7 +146,7 @@ export class DatabaseAPI {
     return this.call('get_vesting_delegations', [account, from, limit])
   }
 
-    /**
+  /**
    * Get list of incoming delegations to an account.
    * @param account Account delegating
    * @param from Delegatee start offset, used for paging.
@@ -254,7 +254,7 @@ export class DatabaseAPI {
     limit: number,
     operation_bitmask?: [number, number]
   ): Promise<[[number, AppliedOperation]]> {
-    let params = [account, from, limit]
+    const params = [account, from, limit]
     /*
     if (operation_bitmask && Array.isArray(operation_bitmask)) {
       if (operation_bitmask.length !== 2) {
