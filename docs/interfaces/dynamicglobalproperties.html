@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>DynamicGlobalProperties | @blurtopian/dblurt</title>
-	<meta name="description" content="Documentation for @blurtopian/dblurt">
+	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -137,7 +137,7 @@
 						<div class="lead">
 							<p> Average block size is updated every block to be:</p>
 						</div>
-						<pre><code>average_block_size = (<span class="hljs-number">99</span> * average_block_size + <span class="hljs-keyword">new</span><span class="hljs-type">_block_size</span>) / <span class="hljs-number">100</span></code></pre><p> This property is used to update the current_reserve_ratio to maintain
+						<pre><code>average_block_size = (<span class="hljs-number">99</span> * average_block_size + new_block_size) / <span class="hljs-number">100</span></code></pre><p> This property is used to update the current_reserve_ratio to maintain
 						approximately 50% or less utilization of network capacity.</p>
 					</div>
 				</section>
@@ -656,5 +656,6 @@
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

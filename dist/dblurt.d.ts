@@ -559,11 +559,11 @@ declare module 'dblurt/chain/serializer' {
 	export type Serializer = (buffer: ByteBuffer, data: any) => void;
 	export const Types: {
 	    Array: (itemSerializer: Serializer) => (buffer: ByteBuffer, data: any[]) => void;
-	    Asset: (buffer: ByteBuffer, data: Asset | string | number) => void;
+	    Asset: (buffer: ByteBuffer, data: string | number | Asset) => void;
 	    Authority: (buffer: ByteBuffer, data: {
 	        [key: string]: any;
 	    }) => void;
-	    Binary: (size?: number | undefined) => (buffer: ByteBuffer, data: Buffer | HexBuffer) => void;
+	    Binary: (size?: number | undefined) => (buffer: ByteBuffer, data: HexBuffer | Buffer) => void;
 	    Boolean: (buffer: ByteBuffer, data: boolean) => void;
 	    Date: (buffer: ByteBuffer, data: string) => void;
 	    FlatMap: (keySerializer: Serializer, valueSerializer: Serializer) => (buffer: ByteBuffer, data: [any, any][]) => void;
@@ -579,7 +579,7 @@ declare module 'dblurt/chain/serializer' {
 	    Price: (buffer: ByteBuffer, data: {
 	        [key: string]: any;
 	    }) => void;
-	    PublicKey: (buffer: ByteBuffer, data: PublicKey | string | null) => void;
+	    PublicKey: (buffer: ByteBuffer, data: string | PublicKey | null) => void;
 	    StaticVariant: (itemSerializers: Serializer[]) => (buffer: ByteBuffer, data: [number, any]) => void;
 	    String: (buffer: ByteBuffer, data: string) => void;
 	    Transaction: (buffer: ByteBuffer, data: {
@@ -722,7 +722,7 @@ declare module 'dblurt/crypto' {
 	     */
 	    inspect(): string;
 	}
-	export type KeyRole = "owner" | "active" | "posting" | "memo";
+	export type KeyRole = 'owner' | 'active' | 'posting' | 'memo';
 	/**
 	 * ECDSA (secp256k1) private key.
 	 */
@@ -1823,7 +1823,7 @@ declare module 'dblurt/utils' {
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
 	/// <reference types="node" />
-	import { EventEmitter } from "events";
+	import { EventEmitter } from 'events';
 	/**
 	 * Return a promise that will resove when a specific event is emitted.
 	 */
@@ -2326,6 +2326,13 @@ declare module 'dblurt/helpers/database' {
 	     * @param limit Number of results, max 1000.
 	     */
 	    getVestingDelegations(account: string, from?: string, limit?: number): Promise<VestingDelegation[]>;
+	    /**
+	     * Get list of incoming delegations to an account.
+	     * @param account Account delegating
+	     * @param from Delegatee start offset, used for paging.
+	     * @param limit Number of results, max 1000.
+	     */
+	    getIncomingVestingDelegations(account: string, from?: string, limit?: number): Promise<VestingDelegation[]>;
 	    /**
 	     * Return server config. See:
 	     * https://github.com/steemit/steem/blob/master/libraries/protocol/include/steemit/protocol/config.hpp

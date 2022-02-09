@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>DatabaseAPI | @blurtopian/dblurt</title>
-	<meta name="description" content="Documentation for @blurtopian/dblurt">
+	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -103,6 +103,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="databaseapi.html#getcurrentmedianhistoryprice" class="tsd-kind-icon">get<wbr>Current<wbr>Median<wbr>History<wbr>Price</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="databaseapi.html#getdiscussions" class="tsd-kind-icon">get<wbr>Discussions</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="databaseapi.html#getdynamicglobalproperties" class="tsd-kind-icon">get<wbr>Dynamic<wbr>Global<wbr>Properties</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="databaseapi.html#getincomingvestingdelegations" class="tsd-kind-icon">get<wbr>Incoming<wbr>Vesting<wbr>Delegations</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="databaseapi.html#getoperations" class="tsd-kind-icon">get<wbr>Operations</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="databaseapi.html#getstate" class="tsd-kind-icon">get<wbr>State</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="databaseapi.html#gettransaction" class="tsd-kind-icon">get<wbr>Transaction</a></li>
@@ -144,7 +145,7 @@
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="client" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> client</h3>
+					<h3>client</h3>
 					<div class="tsd-signature tsd-kind-icon">client<span class="tsd-signature-symbol">:</span> <a href="client.html" class="tsd-signature-type">Client</a></div>
 					<aside class="tsd-sources">
 						<ul>
@@ -196,7 +197,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in helpers/database.ts:237</li>
+									<li>Defined in helpers/database.ts:251</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -264,7 +265,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in helpers/database.ts:199</li>
+									<li>Defined in helpers/database.ts:213</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -295,7 +296,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in helpers/database.ts:167</li>
+									<li>Defined in helpers/database.ts:181</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -323,7 +324,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in helpers/database.ts:160</li>
+									<li>Defined in helpers/database.ts:174</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -373,7 +374,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in helpers/database.ts:153</li>
+									<li>Defined in helpers/database.ts:167</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -418,7 +419,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in helpers/database.ts:188</li>
+									<li>Defined in helpers/database.ts:202</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -468,6 +469,49 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getincomingvestingdelegations" class="tsd-anchor"></a>
+					<h3>get<wbr>Incoming<wbr>Vesting<wbr>Delegations</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Incoming<wbr>Vesting<wbr>Delegations<span class="tsd-signature-symbol">(</span>account<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, from<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vestingdelegation.html" class="tsd-signature-type">VestingDelegation</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in helpers/database.ts:155</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get list of incoming delegations to an account.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>account: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Account delegating</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> from: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Delegatee start offset, used for paging.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> limit: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1000</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Number of results, max 1000.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vestingdelegation.html" class="tsd-signature-type">VestingDelegation</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getoperations" class="tsd-anchor"></a>
 					<h3>get<wbr>Operations</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -477,7 +521,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in helpers/database.ts:174</li>
+									<li>Defined in helpers/database.ts:188</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -540,7 +584,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in helpers/database.ts:206</li>
+									<li>Defined in helpers/database.ts:220</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -568,7 +612,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in helpers/database.ts:266</li>
+									<li>Defined in helpers/database.ts:279</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -633,7 +677,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in helpers/database.ts:261</li>
+									<li>Defined in helpers/database.ts:274</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -705,6 +749,9 @@
 								<a href="databaseapi.html#getdynamicglobalproperties" class="tsd-kind-icon">get<wbr>Dynamic<wbr>Global<wbr>Properties</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="databaseapi.html#getincomingvestingdelegations" class="tsd-kind-icon">get<wbr>Incoming<wbr>Vesting<wbr>Delegations</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="databaseapi.html#getoperations" class="tsd-kind-icon">get<wbr>Operations</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -758,5 +805,6 @@
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
