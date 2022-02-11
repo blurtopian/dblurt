@@ -1847,7 +1847,7 @@ declare module 'dblurt/utils' {
 	    response: any;
 	    currentAddress: string;
 	}>;
-	import { Asset, PriceType } from 'dblurt/chain/asset';
+	import { Asset } from 'dblurt/chain/asset';
 	import { WitnessSetPropertiesOperation } from 'dblurt/chain/operation';
 	import { PublicKey } from 'dblurt/crypto';
 	export interface WitnessProps {
@@ -1857,8 +1857,8 @@ declare module 'dblurt/utils' {
 	    key: PublicKey | string;
 	    maximum_block_size?: number;
 	    new_signing_key?: PublicKey | string | null;
-	    hbd_exchange_rate?: PriceType;
-	    hbd_interest_rate?: number;
+	    operation_flat_fee?: string | Asset;
+	    bandwidth_kbytes_fee?: string | Asset;
 	    url?: string;
 	}
 	export function buildWitnessUpdateOp(owner: string, props: WitnessProps): WitnessSetPropertiesOperation;
