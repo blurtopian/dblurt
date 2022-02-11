@@ -36,6 +36,8 @@ For node.js or the browser with [browserify](https://github.com/substack/node-br
 https://docs.npmjs.com/creating-and-publishing-scoped-public-packages#publishing-scoped-public-packages
 
 ```
-make all <-- run on Ubuntu in VPS
+make all <-- run on Ubuntu in VPS/MacinCloud
+npm login
+npm version [<newversion> | major | minor | patch ...]
 npm publish --access public
 ```

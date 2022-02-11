@@ -206,8 +206,8 @@ export interface WitnessProps {
   key: PublicKey | string
   maximum_block_size?: number // uint32_t
   new_signing_key?: PublicKey | string | null
-  hbd_exchange_rate?: PriceType
-  hbd_interest_rate?: number // uint16_t
+  operation_flat_fee?: string | Asset
+  bandwidth_kbytes_fee?: string | Asset
   url?: string
 }
 function serialize(serializer: Serializer, data: any) {
