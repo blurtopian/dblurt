@@ -84,11 +84,11 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#account_creation_fee" class="tsd-kind-icon">account_<wbr>creation_<wbr>fee</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#account_subsidy_budget" class="tsd-kind-icon">account_<wbr>subsidy_<wbr>budget</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#account_subsidy_decay" class="tsd-kind-icon">account_<wbr>subsidy_<wbr>decay</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#hbd_exchange_rate" class="tsd-kind-icon">hbd_<wbr>exchange_<wbr>rate</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#hbd_interest_rate" class="tsd-kind-icon">hbd_<wbr>interest_<wbr>rate</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#bandwidth_kbytes_fee" class="tsd-kind-icon">bandwidth_<wbr>kbytes_<wbr>fee</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#key" class="tsd-kind-icon">key</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#maximum_block_size" class="tsd-kind-icon">maximum_<wbr>block_<wbr>size</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#new_signing_key" class="tsd-kind-icon">new_<wbr>signing_<wbr>key</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#operation_flat_fee" class="tsd-kind-icon">operation_<wbr>flat_<wbr>fee</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#url" class="tsd-kind-icon">url</a></li>
 							</ul>
 						</section>
@@ -128,19 +128,9 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="hbd_exchange_rate" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> hbd_<wbr>exchange_<wbr>rate</h3>
-					<div class="tsd-signature tsd-kind-icon">hbd_<wbr>exchange_<wbr>rate<span class="tsd-signature-symbol">:</span> <a href="../globals.html#pricetype" class="tsd-signature-type">PriceType</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in utils.ts:209</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="hbd_interest_rate" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> hbd_<wbr>interest_<wbr>rate</h3>
-					<div class="tsd-signature tsd-kind-icon">hbd_<wbr>interest_<wbr>rate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<a name="bandwidth_kbytes_fee" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bandwidth_<wbr>kbytes_<wbr>fee</h3>
+					<div class="tsd-signature tsd-kind-icon">bandwidth_<wbr>kbytes_<wbr>fee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/asset.html" class="tsd-signature-type">Asset</a></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in utils.ts:210</li>
@@ -174,6 +164,16 @@
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in utils.ts:208</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="operation_flat_fee" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> operation_<wbr>flat_<wbr>fee</h3>
+					<div class="tsd-signature tsd-kind-icon">operation_<wbr>flat_<wbr>fee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/asset.html" class="tsd-signature-type">Asset</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in utils.ts:209</li>
 						</ul>
 					</aside>
 				</section>
@@ -214,10 +214,7 @@
 								<a href="witnessprops.html#account_subsidy_decay" class="tsd-kind-icon">account_<wbr>subsidy_<wbr>decay</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="witnessprops.html#hbd_exchange_rate" class="tsd-kind-icon">hbd_<wbr>exchange_<wbr>rate</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="witnessprops.html#hbd_interest_rate" class="tsd-kind-icon">hbd_<wbr>interest_<wbr>rate</a>
+								<a href="witnessprops.html#bandwidth_kbytes_fee" class="tsd-kind-icon">bandwidth_<wbr>kbytes_<wbr>fee</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="witnessprops.html#key" class="tsd-kind-icon">key</a>
@@ -227,6 +224,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="witnessprops.html#new_signing_key" class="tsd-kind-icon">new_<wbr>signing_<wbr>key</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="witnessprops.html#operation_flat_fee" class="tsd-kind-icon">operation_<wbr>flat_<wbr>fee</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="witnessprops.html#url" class="tsd-kind-icon">url</a>

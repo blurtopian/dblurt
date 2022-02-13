@@ -99,8 +99,10 @@
 					<h2>Publishing</h2>
 				</a>
 				<p><a href="https://docs.npmjs.com/creating-and-publishing-scoped-public-packages#publishing-scoped-public-packages">https://docs.npmjs.com/creating-and-publishing-scoped-public-packages#publishing-scoped-public-packages</a></p>
-				<pre><code>make <span class="hljs-keyword">all</span> &lt;<span class="hljs-comment">-- run on Ubuntu in VPS</span>
-npm publish <span class="hljs-comment">--access public</span></code></pre>
+				<pre><code><span class="hljs-keyword">make</span> <span class="hljs-keyword">all</span> &lt;-- run <span class="hljs-keyword">on</span> Ubuntu in VPS/MacinCloud
+npm login
+npm <span class="hljs-keyword">version</span> [<span class="hljs-symbol">&lt;newversion&gt;</span> | major | minor | patch ...]
+npm publish --access public</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
