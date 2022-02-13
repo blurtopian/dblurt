@@ -2,7 +2,7 @@ version = 1
 
 # marks a folder as containing tests
 test_patterns = [
-  "client-libs/dblurt/test/*"
+  "test/*"
 ]
 
 exclude_patterns = [
