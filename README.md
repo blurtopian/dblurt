@@ -30,7 +30,6 @@ For node.js or the browser with [browserify](https://github.com/substack/node-br
 
 ## Bundling
 
-
 ## Publishing
 
 https://docs.npmjs.com/creating-and-publishing-scoped-public-packages#publishing-scoped-public-packages
