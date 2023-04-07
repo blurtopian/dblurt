@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>WitnessProps | @blurtopian/dblurt</title>
+	<title>RewardFund | @blurtopian/dblurt</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,21 +56,28 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="witnessprops.html">WitnessProps</a>
+					<a href="rewardfund.html">RewardFund</a>
 				</li>
 			</ul>
-			<h1>Interface WitnessProps</h1>
+			<h1>Interface RewardFund</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Reward Fund (post)</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">WitnessProps</span>
+						<span class="target">RewardFund</span>
 					</li>
 				</ul>
 			</section>
@@ -81,15 +88,16 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#account_creation_fee" class="tsd-kind-icon">account_<wbr>creation_<wbr>fee</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#account_subsidy_budget" class="tsd-kind-icon">account_<wbr>subsidy_<wbr>budget</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#account_subsidy_decay" class="tsd-kind-icon">account_<wbr>subsidy_<wbr>decay</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#bandwidth_kbytes_fee" class="tsd-kind-icon">bandwidth_<wbr>kbytes_<wbr>fee</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#key" class="tsd-kind-icon">key</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#maximum_block_size" class="tsd-kind-icon">maximum_<wbr>block_<wbr>size</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#new_signing_key" class="tsd-kind-icon">new_<wbr>signing_<wbr>key</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#operation_flat_fee" class="tsd-kind-icon">operation_<wbr>flat_<wbr>fee</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="witnessprops.html#url" class="tsd-kind-icon">url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="rewardfund.html#author_reward_curve" class="tsd-kind-icon">author_<wbr>reward_<wbr>curve</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="rewardfund.html#content_constant" class="tsd-kind-icon">content_<wbr>constant</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="rewardfund.html#curation_reward_curve" class="tsd-kind-icon">curation_<wbr>reward_<wbr>curve</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="rewardfund.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="rewardfund.html#last_update" class="tsd-kind-icon">last_<wbr>update</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="rewardfund.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="rewardfund.html#percent_content_rewards" class="tsd-kind-icon">percent_<wbr>content_<wbr>rewards</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="rewardfund.html#percent_curation_rewards" class="tsd-kind-icon">percent_<wbr>curation_<wbr>rewards</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="rewardfund.html#recent_claims" class="tsd-kind-icon">recent_<wbr>claims</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="rewardfund.html#reward_balance" class="tsd-kind-icon">reward_<wbr>balance</a></li>
 							</ul>
 						</section>
 					</div>
@@ -98,92 +106,102 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="account_creation_fee" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> account_<wbr>creation_<wbr>fee</h3>
-					<div class="tsd-signature tsd-kind-icon">account_<wbr>creation_<wbr>fee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/asset.html" class="tsd-signature-type">Asset</a></div>
+					<a name="author_reward_curve" class="tsd-anchor"></a>
+					<h3>author_<wbr>reward_<wbr>curve</h3>
+					<div class="tsd-signature tsd-kind-icon">author_<wbr>reward_<wbr>curve<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"convergent_linear"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils.ts:203</li>
+							<li>Defined in chain/misc.ts:451</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="account_subsidy_budget" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> account_<wbr>subsidy_<wbr>budget</h3>
-					<div class="tsd-signature tsd-kind-icon">account_<wbr>subsidy_<wbr>budget<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<a name="content_constant" class="tsd-anchor"></a>
+					<h3>content_<wbr>constant</h3>
+					<div class="tsd-signature tsd-kind-icon">content_<wbr>constant<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils.ts:204</li>
+							<li>Defined in chain/misc.ts:448</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="account_subsidy_decay" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> account_<wbr>subsidy_<wbr>decay</h3>
-					<div class="tsd-signature tsd-kind-icon">account_<wbr>subsidy_<wbr>decay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<a name="curation_reward_curve" class="tsd-anchor"></a>
+					<h3>curation_<wbr>reward_<wbr>curve</h3>
+					<div class="tsd-signature tsd-kind-icon">curation_<wbr>reward_<wbr>curve<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"convergent_square_root"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils.ts:205</li>
+							<li>Defined in chain/misc.ts:452</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="bandwidth_kbytes_fee" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bandwidth_<wbr>kbytes_<wbr>fee</h3>
-					<div class="tsd-signature tsd-kind-icon">bandwidth_<wbr>kbytes_<wbr>fee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/asset.html" class="tsd-signature-type">Asset</a></div>
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils.ts:210</li>
+							<li>Defined in chain/misc.ts:443</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="key" class="tsd-anchor"></a>
-					<h3>key</h3>
-					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <a href="../classes/publickey.html" class="tsd-signature-type">PublicKey</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="last_update" class="tsd-anchor"></a>
+					<h3>last_<wbr>update</h3>
+					<div class="tsd-signature tsd-kind-icon">last_<wbr>update<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils.ts:206</li>
+							<li>Defined in chain/misc.ts:447</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="maximum_block_size" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> maximum_<wbr>block_<wbr>size</h3>
-					<div class="tsd-signature tsd-kind-icon">maximum_<wbr>block_<wbr>size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"post"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils.ts:207</li>
+							<li>Defined in chain/misc.ts:444</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="new_signing_key" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> new_<wbr>signing_<wbr>key</h3>
-					<div class="tsd-signature tsd-kind-icon">new_<wbr>signing_<wbr>key<span class="tsd-signature-symbol">:</span> <a href="../classes/publickey.html" class="tsd-signature-type">PublicKey</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+					<a name="percent_content_rewards" class="tsd-anchor"></a>
+					<h3>percent_<wbr>content_<wbr>rewards</h3>
+					<div class="tsd-signature tsd-kind-icon">percent_<wbr>content_<wbr>rewards<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils.ts:208</li>
+							<li>Defined in chain/misc.ts:450</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="operation_flat_fee" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> operation_<wbr>flat_<wbr>fee</h3>
-					<div class="tsd-signature tsd-kind-icon">operation_<wbr>flat_<wbr>fee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/asset.html" class="tsd-signature-type">Asset</a></div>
+					<a name="percent_curation_rewards" class="tsd-anchor"></a>
+					<h3>percent_<wbr>curation_<wbr>rewards</h3>
+					<div class="tsd-signature tsd-kind-icon">percent_<wbr>curation_<wbr>rewards<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils.ts:209</li>
+							<li>Defined in chain/misc.ts:449</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="url" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> url</h3>
-					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="recent_claims" class="tsd-anchor"></a>
+					<h3>recent_<wbr>claims</h3>
+					<div class="tsd-signature tsd-kind-icon">recent_<wbr>claims<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in utils.ts:211</li>
+							<li>Defined in chain/misc.ts:446</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="reward_balance" class="tsd-anchor"></a>
+					<h3>reward_<wbr>balance</h3>
+					<div class="tsd-signature tsd-kind-icon">reward_<wbr>balance<span class="tsd-signature-symbol">:</span> <a href="../classes/asset.html" class="tsd-signature-type">Asset</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in chain/misc.ts:445</li>
 						</ul>
 					</aside>
 				</section>
@@ -202,34 +220,37 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="witnessprops.html" class="tsd-kind-icon">Witness<wbr>Props</a>
+						<a href="rewardfund.html" class="tsd-kind-icon">Reward<wbr>Fund</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="witnessprops.html#account_creation_fee" class="tsd-kind-icon">account_<wbr>creation_<wbr>fee</a>
+								<a href="rewardfund.html#author_reward_curve" class="tsd-kind-icon">author_<wbr>reward_<wbr>curve</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="witnessprops.html#account_subsidy_budget" class="tsd-kind-icon">account_<wbr>subsidy_<wbr>budget</a>
+								<a href="rewardfund.html#content_constant" class="tsd-kind-icon">content_<wbr>constant</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="witnessprops.html#account_subsidy_decay" class="tsd-kind-icon">account_<wbr>subsidy_<wbr>decay</a>
+								<a href="rewardfund.html#curation_reward_curve" class="tsd-kind-icon">curation_<wbr>reward_<wbr>curve</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="witnessprops.html#bandwidth_kbytes_fee" class="tsd-kind-icon">bandwidth_<wbr>kbytes_<wbr>fee</a>
+								<a href="rewardfund.html#id" class="tsd-kind-icon">id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="witnessprops.html#key" class="tsd-kind-icon">key</a>
+								<a href="rewardfund.html#last_update" class="tsd-kind-icon">last_<wbr>update</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="witnessprops.html#maximum_block_size" class="tsd-kind-icon">maximum_<wbr>block_<wbr>size</a>
+								<a href="rewardfund.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="witnessprops.html#new_signing_key" class="tsd-kind-icon">new_<wbr>signing_<wbr>key</a>
+								<a href="rewardfund.html#percent_content_rewards" class="tsd-kind-icon">percent_<wbr>content_<wbr>rewards</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="witnessprops.html#operation_flat_fee" class="tsd-kind-icon">operation_<wbr>flat_<wbr>fee</a>
+								<a href="rewardfund.html#percent_curation_rewards" class="tsd-kind-icon">percent_<wbr>curation_<wbr>rewards</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="witnessprops.html#url" class="tsd-kind-icon">url</a>
+								<a href="rewardfund.html#recent_claims" class="tsd-kind-icon">recent_<wbr>claims</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="rewardfund.html#reward_balance" class="tsd-kind-icon">reward_<wbr>balance</a>
 							</li>
 						</ul>
 					</li>
