@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/blurtopian/blurtlibs/dblurt.git"
+    "url": "https://github.com/blurtopian/dblurt.git"
   },
   "scripts": {
     "lint": "make lint",
@@ -79,9 +79,9 @@
     "watchify": "^3.11.0"
   },
   "bugs": {
-    "url": "https://gitlab.com/blurt/openblurt/dblurt/issues"
+    "url": "https://github.com/blurtopian/dblurt/issues"
   },
-  "homepage": "https://gitlab.com/blurt/openblurt/dblurt#readme",
+  "homepage": "https://github.com/blurtopian/dblurt#readme",
   "directories": {
     "doc": "docs",
     "example": "examples",
